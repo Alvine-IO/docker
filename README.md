@@ -2,7 +2,9 @@
 
 This repository provides a client library for docker witten in pure PHP. This library supports the most Features of Docker 1.19 API. 
 
-## API Documentation
+## Usage
+
+See the API documentation:
 
 http://doc.alvine.io/alvine.infrastructure.docker/
 
