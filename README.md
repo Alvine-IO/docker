@@ -28,9 +28,9 @@ wget http://download.alvine.io/alvine.infrastructure.docker-<version>.phar.pubke
 
     $filter = new Alvine\Types\Collection('\Alvine\Infrastructure\Docker\Container\Filter');
     $filter->append(new \Alvine\Infrastructure\Docker\Container\Filter\Status(Alvine\Infrastructure\Docker\Container\Filter\Status::RUNNING));
-    $containers = $docker->getContainers(true, null, null, null, $filter);
+    $containers = $client->getContainers(true, null, null, null, $filter);
     foreach($containers AS $container) {
-        $container = $docker->inspectContainer($containers);
+        $container = $client->inspectContainer($containers);
         echo $container->getID();
     }
     
@@ -47,13 +47,13 @@ wget http://download.alvine.io/alvine.infrastructure.docker-<version>.phar.pubke
        ->setRestartPolicy(new \Alvine\Infrastructure\Docker\Container\RestartPolicy(\Alvine\Infrastructure\Docker\Container\RestartPolicy::ALWAYS));
 
     try {
-       $docker->runContainer($name, $config, $hostConfig);
+       $client->runContainer($name, $config, $hostConfig);
     } catch(\Exception $ex) {
        echo $ex->getMessage();
     }
     
     // delete a container
     $container = $docker->getContainerByName('my');
-    $docker->deleteContainer($container->getContainerID());
+    $client->deleteContainer($container->getContainerID());
     
 ```
