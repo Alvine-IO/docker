@@ -52,4 +52,8 @@ wget http://download.alvine.io/alvine.infrastructure.docker-<version>.phar.pubke
        echo $ex->getMessage();
     }
     
+    // delete a container
+    $container = $docker->getContainerByName('my');
+    $docker->deleteContainer($container->getContainerID());
+    
 ```
