@@ -4,12 +4,12 @@ This repository provides a client library for docker witten in pure PHP. This li
 
 ## Documentation
 
-http://doc.alvine.io/alvine.infrastructure.docker/ API
-https://wiki.schukai.com/display/alvine2/Framework Wiki
++ http://doc.alvine.io/alvine.infrastructure.docker/ API
++ https://wiki.schukai.com/display/alvine2/Framework Wiki
 
-## Install and running docker-lib
+## Install and running alvine-framework
 
-Download Library from http://download.alvine.io
+Download Framework from http://download.alvine.io
 
 ```bash
 wget http://download.alvine.io/alvine.infrastructure.docker-<version>.phar
